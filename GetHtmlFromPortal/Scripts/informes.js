@@ -42,5 +42,24 @@ var getDisponibilidade = function () {
             alert("ExceptionType: " + r.ExceptionType);
         }
     });
+}
 
+var getConsultaEPECNaoConciliado = function () {
+    $.ajax({
+        type: "GET",
+        url: '/Home/ConsultaEPECNaoConciliado',
+        contentType: "application/json; charset=utf-8",
+        data: {},
+        dataType: "json",
+        success: function (json) {
+            console.log(json);
+            $("body").html(JSON.stringify(json));
+        },
+        error: function (ex) {
+            var r = jQuery.parseJSON(json.responseText);
+            alert("Message: " + r.Message);
+            alert("StackTrace: " + r.StackTrace);
+            alert("ExceptionType: " + r.ExceptionType);
+        }
+    });
 }
