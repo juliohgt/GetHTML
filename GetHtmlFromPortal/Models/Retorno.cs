@@ -33,4 +33,16 @@ namespace GetHtmlFromPortal.Models
         public string RecepcaoEvento { get; set; }
         public string Mensagem { get; set; }
     }
+
+    public class EPECs
+    {
+        public string CNPJ { get; set; }
+        public string Serie { get; set; }
+        public string Numero { get; set; }
+        public string DataAutorizacao { get; set; }
+        public string UFDest { get; set; }
+        public string Valor { get; set; }
+        public string DiasAtrasado { get; set; }
+        public string Mensagem { get; set; }
+    }
 }
